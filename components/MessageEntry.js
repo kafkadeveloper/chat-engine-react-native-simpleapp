@@ -28,8 +28,6 @@ class MessageEntry extends Component {
 
     if (this.state.chatInput) {
 
-      console.log(this.state.chatInput)
-
       this.props.chat.emit("message", {
         text: this.state.chatInput
       });

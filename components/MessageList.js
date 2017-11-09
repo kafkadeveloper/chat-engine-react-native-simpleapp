@@ -71,12 +71,8 @@ class MessageList extends React.PureComponent {
       this.setState({ messages: [...this.state.messages, data] });
     });
 
-    console.log(this.props.chat);
-
     searchy.on('$.search.finish', () => {
       this.setState({loading:false, messages: this.state.messages.reverse()});
-
-      console.log('search finish called', this.props.chat)
 
       this.props.chat.on("message", payload => {
 
