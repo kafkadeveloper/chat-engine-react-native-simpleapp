@@ -27,12 +27,11 @@ import Chat from "./screens/Chat";
 
 const ChatEngine = ChatEngineCore.create(
   {
-    publishKey: "pub-c-c6303bb2-8bf8-4417-aac7-e83b52237ea6",
-    subscribeKey: "sub-c-67db0e7a-50be-11e7-bf50-02ee2ddab7fe"
+    publishKey: 'pub-c-d8599c43-cecf-42ba-a72f-aa3b24653c2b',
+    subscribeKey: 'sub-c-6c6c021c-c4e2-11e7-9628-f616d8b03518'
   },
   {
-    endpoint: "https://adamb-react-native-chat-engine.herokuapp.com/insecure",
-    globalChannel: "ajb-global-test-channel-345346685234356"
+    globalChannel: "ajb-global-test-channel-345346685234356343"
   }
 );
 
@@ -60,7 +59,7 @@ export default class App extends React.Component {
     if(username === ""){
       return; //do nothing on empty username
     }
-    
+
     ChatEngine.connect(
       username,
       {

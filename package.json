@@ -6,7 +6,7 @@
   "private": true,
   "main": "node_modules/expo/AppEntry.js",
   "dependencies": {
-    "chat-engine": "^0.7.0",
+    "chat-engine": "^0.8.3",
     "chat-engine-gravatar": "0.0.7",
     "chat-engine-markdown": "0.0.7",
     "chat-engine-online-user-search": "0.0.7",

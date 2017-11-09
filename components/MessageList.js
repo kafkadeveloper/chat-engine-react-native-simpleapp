@@ -70,29 +70,32 @@ class MessageList extends React.PureComponent {
     searchy.on('message', (data) => {
       this.setState({ messages: [...this.state.messages, data] });
     });
-    
+
     searchy.on('$.search.finish', () => {
       this.setState({loading:false, messages: this.state.messages.reverse()});
 
       this.props.chat.on("message", payload => {
+
         this.setState({ messages: [...this.state.messages, payload] });
       });
+
     });
   }
 
-  componentWillUpdate(newProps){
+  componentWillUpdate(newProps) {
+
     if(this.props.chat !== newProps.chat){
       this.setState({messages: [], loading:true});
-  
+
       let searchy = newProps.chat.search({
         event: 'message',
         limit: 50
       });
-  
+
       searchy.on('message', (data) => {
         this.setState({ messages: [...this.state.messages, data] });
       });
-      
+
       searchy.on('$.search.finish', () => {
         this.setState({loading:false, messages: this.state.messages.reverse()});
 

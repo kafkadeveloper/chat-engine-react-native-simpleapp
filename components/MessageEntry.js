@@ -25,10 +25,13 @@ class MessageEntry extends Component {
   }
 
   sendChat() {
+
     if (this.state.chatInput) {
+
       this.props.chat.emit("message", {
         text: this.state.chatInput
       });
+
       this.setState({ chatInput: "" });
     }
   }

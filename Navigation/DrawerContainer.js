@@ -7,7 +7,7 @@ import UserList from '../components/UserList';
 
 const chatList = [
   {
-    name: "General Chat",
+    name: "GeneralChat",
     subtitle: "General Chat",
     unread: 5
   },
